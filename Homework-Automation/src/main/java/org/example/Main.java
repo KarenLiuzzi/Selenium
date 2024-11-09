@@ -28,6 +28,9 @@ public class Main {
         WebElement btnSignIn = driver.findElement(By.id("log-in"));
         btnSignIn.click();
 
+        WebElement name = driver.findElement(By.cssSelector("div.logged-user-info-w div.logged-user-name"));
+        System.out.println(name + " name");
+
         WebElement totalBalance = driver.findElement(By.xpath("//div[contains(text(),\"Total Balance\")]/following-sibling::div[@class=\"balance-value\"]/span[not(@class)]"));
         System.out.println("Total Balance: "+ totalBalance.getText());
 
